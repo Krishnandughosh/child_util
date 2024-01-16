@@ -6,8 +6,8 @@ import java.io.IOException;
 
 public class writeFile {
 	public void writefile(String str) {
-		String path= "C:\\Works\\Java_demo\\child-util\\target\\file.txt";
-//		"..\\target/file.txt"
+		String path= "..\\target\file.txt";
+		
 		File file = new File(path);
 	    try {
 	      boolean value = file.createNewFile();
