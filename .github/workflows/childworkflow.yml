@@ -1,23 +1,8 @@
 name: Maven Test and Trigger Another Project
 
-on:
-  push:
-    branches:
-      - master
-
+name: workflow_02
+on: [repository_dispatch]
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Set up JDK
-        uses: actions/setup-java@v2
-        with:
-          distribution: 'adopt'
-          java-version: '11'
-
       - name: Build with Maven
         run: mvn clean test
